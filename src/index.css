@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100svh;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #dce8ef;
+}
+
+@keyframes luma-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.015);
+  }
+}
+
+@keyframes luma-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes luma-shimmer {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes luma-drift {
+  0%,
+  100% {
+    transform: translate(-50%, 0) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -12px) scale(1.06);
+  }
+}
+
+@keyframes luma-drift-reverse {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-16px, 8px) scale(1.08);
+  }
+}
+
+@keyframes luma-drift-slow {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(12px, -10px);
+  }
+}
+
+.animate-luma-glow-pulse {
+  animation: luma-glow-pulse 8s ease-in-out infinite;
+}
+
+.animate-luma-shimmer {
+  animation: luma-shimmer 5s ease-in-out infinite;
+}
+
+.animate-luma-drift {
+  animation: luma-drift 14s ease-in-out infinite;
+}
+
+.animate-luma-drift-reverse {
+  animation: luma-drift-reverse 18s ease-in-out infinite;
+}
+
+.animate-luma-drift-slow {
+  animation: luma-drift-slow 22s ease-in-out infinite;
+}
